@@ -1,0 +1,5 @@
+alias ls='ls -FG'
+#alias vi='mvim'
+alias rgrep='ack'
+
+

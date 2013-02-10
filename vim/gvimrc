@@ -1,0 +1,5 @@
+colors molokai
+set guifont=Terminus\ 12
+"set guifont=Inconsolata\ 12
+au GUIEnter * set lines=52 columns=80
+set guioptions+=c

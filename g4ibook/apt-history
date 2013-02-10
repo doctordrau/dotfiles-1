@@ -1,0 +1,7 @@
+#!/bin/sh
+# run periodically to keep a current apt-get history summary in git config dir
+
+FNAME=$HOME/config/apt_history-`hostname`
+
+(cat /var/log/apt/history.log ;  zcat /var/log/apt/history*.gz) | grep ^Comma >  $FNAME
+ls -l $FNAME

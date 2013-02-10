@@ -1,0 +1,7 @@
+colors molokai
+set guifont=Inconsolata\ 14
+au GUIEnter * set lines=42 columns=80
+set guioptions+=c
+set guioptions-=T
+set transparency=5
+

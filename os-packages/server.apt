@@ -1,0 +1,34 @@
+# common to servers and desktops
+nfs-common ntp ntpdate screen slay strace ltrace lsof nullmailer mailx vim-full links openssh-server pwgen
+
+# cli workstation/server tools
+ssh nmap dict cadaver irssi rtorrent samba-common
+
+# got hard drives?
+lvm2 mdadm
+
+# network access or management tools
+sshfs network-manager-vpnc network-manager-pptp network-manager-openvpn ethstatus iptraf etherape wireshark 
+
+# stuff for building & developing (nox)
+build-essential checkinstall  subversion git-core exuberant-ctags cvs python-docutils tidy
+
+
+
+##
+## x11 stuff
+##
+
+compizconfig-settings-manager xfonts-terminus xbindkeys vim-gnome dillo gnumeric gqview gtk-recordmydesktop mplayer-nogui mencoder mozilla-mplayer qemu quicksynergy x2vnc x2x x11vnc gnome-do emerald terminator meld rapidsvn
+
+# on x86_64 be careful with ubuntu-restricted-extras -- it pulls in ia32-libs for the flash installer right now, and you might want to not do that.  some day adobe will actually release the real thing.
+
+
+# more:
+#nomachine.com
+#getdropbox.com
+#beta flash 10 .so file
+
+
+
+

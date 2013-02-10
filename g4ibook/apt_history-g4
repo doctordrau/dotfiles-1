@@ -1,0 +1,17 @@
+install cplay
+install madplay
+install git
+install clusterssh
+install tinc
+install python-pip
+install firmware-b43-installer
+install nfs-common
+install mesa-utils
+install gtk2-engines-blueheart
+install xfonts-terminus
+install suckless-tools i3
+install vim-nox
+install avahi-daemon
+install rxvt-unicode fonts-vlgothic- ttf-dejavu- ttf-dejavu-extra-
+install mosh
+install pbbuttonsd

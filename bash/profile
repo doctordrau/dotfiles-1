@@ -1,0 +1,13 @@
+export CONF="$HOME/config/bash"
+function sauce () { [ -r $1 ] && source $1; }
+function sauced () { test -d $1 && (for x in $1/*; do sauce $x ; done) ; }
+
+sauce $CONF/os/$(uname -s)/profile
+sauce $CONF/host/$(hostname | cut -d . -f 1)/profile
+
+PATH="/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/X11/bin"
+[ -r ~/bin ] && PATH="~/bin:$PATH"
+
+# uncomment to not ignore the user's original bashrc (handy on debian?)
+#[ $BASH ] && sauce ~/.bashrc
+[ "x$BASHRC" = "x" ] && sauce $CONF/bashrc

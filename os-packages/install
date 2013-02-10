@@ -1,0 +1,4 @@
+apt-get -y install `cat packages`
+cd /usr/local/bin
+ln -s `which most` less
+rm /etc/motd

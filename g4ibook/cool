@@ -1,0 +1,3 @@
+#!/bin/sh
+test `whoami` = "root" && sudo $0 || exit
+echo -5 > /sys/devices/temperature/limit_adjust

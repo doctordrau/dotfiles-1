@@ -1,0 +1,4 @@
+alias ls='ls -F --color=auto'
+alias sa='sudo apt-get'
+alias open='xdg-open'
+alias p='pacman -S '

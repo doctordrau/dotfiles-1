@@ -1,0 +1,6 @@
+#!/bin/sh
+
+PRIMARY=$1
+SECONDARY=$2
+
+xrandr --output $PRIMARY --preferred --output $SECONDARY --off

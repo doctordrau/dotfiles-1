@@ -1,0 +1,49 @@
+# Config for interactive shells. Executed from profile if $BASH is set.
+
+export CONF="$HOME/config/bash"
+export BASHRC=1
+export hn=$(hostname | cut -d . -f 1)
+
+# Novelty wrapper for 'source'. only sources if the file exists
+function sauce () { [ -r $1 ] && source $1; }
+function sauced () { test -d $1 && (for x in $1/*; do sauce $x ; done) ; }
+
+# Lif is too short to read blue on black dir names
+export LS_COLORS='di=01;33'
+export LSCOLORS='Hxfxcxdxbxegedabagacad'
+
+# ... And other shell options
+export HISTCONTROL=ignoredups
+export HISTCONTROL=ignoreboth
+shopt -s checkwinsize
+
+# Have some sensible defaults
+export EDITOR='vi'
+export VISUAL=$EDITOR
+export PS1="\u@\h:\w\\$ "
+alias ls='ls -F'
+
+#
+# If possible, use these external things
+#
+sauce /etc/bash_completion
+export PIP_DOWNLOAD_CACHE=/tmp/pip_cache
+sauce /usr/local/bin/virtualenvwrapper.sh
+eval "`pip completion --bash`"
+
+sauce $HOME/.rvm/scripts/rvm
+sauce $CONF/resty
+
+
+# Pull in per-host and per-`uname-s` configs
+sauce $CONF/os/$(uname -s)/bashrc
+sauce $CONF/host/$hn/bashrc
+
+# Helper shell aliases
+sauce $CONF/aliases
+
+# Area for lazy appending:
+
+
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

@@ -1,0 +1,14 @@
+lxsession
+lxpanel
+pcmanfm
+xfce4-power-manager
+update-notifier
+polkit-gnome-authentication-agent-1
+NetworkManager Applet
+Osmo 0.2.12
+lxterminal
+ibus-x11
+ibus-xim
+main.py
+blueman-applet
+i3

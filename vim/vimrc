@@ -1,0 +1,42 @@
+syntax on
+set bg=dark
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set foldlevel=10
+set foldmethod=indent
+set shortmess=atI
+set autoindent
+set expandtab
+set hidden
+set hls
+set ignorecase
+set incsearch
+set modeline
+set noswf
+set noerrorbells
+set visualbell
+set ruler
+set smartcase
+set smarttab
+set title
+set wildmenu
+filetype plugin on
+           
+runtime mappings.vim
+runtime mousescroll.vim
+runtime cruft.vim
+
+map <C-W> gq$<CR>
+
+map <F1> :w<CR>
+imap <F1> <Esc>:w<CR>
+
+map <F2> <Esc>:NERDTreeToggle<CR>
+imap <F2> <Esc>:NERDTreeToggle<CR>
+nnoremap <Leader>d :NERDTreeToggle<CR>
+
+let NERDTreeIgnore=['\.pyc']
+
+
+au! BufWritePost .vimrc source %
