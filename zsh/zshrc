@@ -7,7 +7,7 @@ ZSH=$HOME/config/oh-my-zsh
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME=random
-ZSH_THEME=josh
+ZSH_THEME=rgm
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -38,3 +38,4 @@ plugins=(git pip virtualenvwrapper osx terminalapp sublime)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+#
