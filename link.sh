@@ -29,3 +29,9 @@ ln -s config/screenrc .screenrc
 
 mv -f .emerald .emerald.orig
 ln -s config/emerald .emerald
+
+mv -f .Xresources .Xresources.old
+ln -s config/Xresources .Xresources
+
+mv -f .xmobarrc .xmobarrc.old
+ln -s config/xmobarrc .xmobarrc
