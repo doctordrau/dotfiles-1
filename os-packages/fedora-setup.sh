@@ -15,7 +15,7 @@ sudo yum install -y freetype-infinality infinality-settings
 sudo systemctl enable slim.service
 sudo ln -sf /usr/lib/systemd/system/graphical.target /etc/systemd/system/default.target # might need a reboot
 sudo yum update kernel
-sudo systemctl reboot
+read -p "Reboot?" && sudo systemctl reboot
 
 if [ $NVIDIA ]; then
     yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-18.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-18.noarch.rpm

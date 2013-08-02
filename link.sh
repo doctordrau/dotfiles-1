@@ -35,3 +35,7 @@ ln -s config/Xresources .Xresources
 
 mv -f .xmobarrc .xmobarrc.old
 ln -s config/xmobarrc .xmobarrc
+
+mv -f .xmonad .xmonad.orig
+ln -s config/xmonad .xmonad
+
