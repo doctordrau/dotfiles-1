@@ -17,7 +17,7 @@ ZSH_THEME=rgm
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
 # export UPDATE_ZSH_DAYS=13
@@ -33,9 +33,11 @@ DISABLE_VENV_CD=1
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 #COMPLETION_WAITING_DOTS="true"
 
-plugins=(git pip virtualenvwrapper osx terminalapp sublime)
+plugins=(git pip virtualenvwrapper osx terminalapp sublime vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-#
+PATH="$PATH:$HOME/bin/"
+
+# Sets PERL5LIB and adds bin dir to PATH / cpanm --local-lib=~/perl5 local::lib
+eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
