@@ -1,4 +1,4 @@
 dotfiles
 ========
 
-it's my dotfiles and notes and stuff
+currently ricing my unix with bspwm or sometimes xmonad

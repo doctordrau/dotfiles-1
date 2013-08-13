@@ -27,15 +27,15 @@ ln -s config/fonts .fonts
 mv -f .screenrc .screenrc.orig
 ln -s config/screenrc .screenrc
 
-mv -f .emerald .emerald.orig
-ln -s config/emerald .emerald
+mv -f .xinitrc .xinitrc.orig
+ln -s config/xinitrc .xinitrc
 
-mv -f .Xresources .Xresources.old
+mv -f .Xresources .Xresources.orig
 ln -s config/Xresources .Xresources
 
-mv -f .xmobarrc .xmobarrc.old
-ln -s config/xmobarrc .xmobarrc
+mv -f .config/bspwm .config/bspwm.orig
+ln -s config/bspwm .config/bspwm
 
-mv -f .xmonad .xmonad.orig
-ln -s config/xmonad .xmonad
+mv -f .config/sxhkd .config/sxhkd.orig
+ln -s config/sxhkd .config/sxhkd
 
