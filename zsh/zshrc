@@ -13,6 +13,8 @@ ZSH_THEME=rgm
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias vi=vim
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 

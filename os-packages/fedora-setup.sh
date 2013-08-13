@@ -1,12 +1,17 @@
 #!/bin/sh
 MYUTILS="git zsh vim screen python-virtualenvwrapper"
 MYGROUPS="standard base-x fonts"
-MYDESKTOP="slim xmonad xmobar rxvt-unicode-256color trayer xorg-x11-fonts-100dpi firefox"
+MYDESKTOP="slim rxvt-unicode-256color trayer xorg-x11-fonts-100dpi firefox"
+BSPWM_DEPS="libxcb-devel libxcb xcb-util xcb-util-wm xcb-util-devel xcb-util-wm-devel xcb-util-keysyms-devel"
+RICE="dzen2 conky"
 
 sudo yum update -y audit
 sudo yum install -y $MYUTILS
 sudo yum group install -y $MYGROUPS
 sudo yum install -y $MYDESKTOP
+sudo yum install -y $BSPWM_DEPS
+# clone & compile bspwm here...
+sudo yum install -y $RICE
 
 sudo yum install -y http://www.infinality.net/fedora/linux/infinality-repo-1.0-1.noarch.rpm
 sudo yum install -y freetype-infinality infinality-settings
