@@ -39,3 +39,6 @@ ln -s config/bspwm .config/bspwm
 mv -f .config/sxhkd .config/sxhkd.orig
 ln -s config/sxhkd .config/sxhkd
 
+
+mv -f .compton.conf .compton.conf.orig
+ln -s config/compton.conf .compton.conf
