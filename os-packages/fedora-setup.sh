@@ -4,7 +4,7 @@ MYUTILS="git zsh vim screen python-virtualenvwrapper"
 MYGROUPS="standard base-x"
 MYDESKTOP="slim rxvt-unicode-256color"
 MYDESKTOP_FONTS="google-droid-{sans,serif,sans-mono}-fonts terminus-fonts"
-MYDESKTOP_APPS="firefox"
+MYDESKTOP_APPS="firefox xfce4-panel"
 
 BSPWM_DEPS="libxcb-devel libxcb xcb-util xcb-util-wm xcb-util-devel xcb-util-wm-devel xcb-util-keysyms-devel"
 
