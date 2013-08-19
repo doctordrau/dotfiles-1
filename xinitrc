@@ -1,4 +1,4 @@
-xrdb ~/.Xresources
+xrdb -merge ~/.Xresources
 xset +fp $HOME/.fonts/ansi
 xset fp rehash
 xsetroot -cursor_name left_ptr
