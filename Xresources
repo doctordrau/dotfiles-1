@@ -26,8 +26,12 @@ URxvt.keysym.C-S-Down:	perl:font-size:decglobal
 
 URxvt.iconFile:    /usr/share/icons/hicolor/scalable/apps/Terminal.svg
 
-!URxvt*font: xft:Liberation Mono:pixelsize=13:antialias=true:hinting=true
+!URxvt*font: xft:Liberation Mono:pixelsize=14:antialias=true:hinting=true
 !URxvt*font: xft:Inconsolata:pixelsize=14:antialias=true:hinting=true
+!URxvt*font: xft:Terminus:pixelsize=14:antialias=true:hinting=true
+!URxvt*font: xft:Droid Sans Mono:pixelsize=14:antialias=true:hinting=true
+!URxvt*font: xft:Source Code Pro Semibold:pixelsize=14:antialias=true:hinting=true
+URxvt*font: xft:Monaco:pixelsize=14:antialias=true:hinting=true
 
 URxvt*termName: rxvt-color
 
