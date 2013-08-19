@@ -2,9 +2,9 @@
 
 MYUTILS="git zsh vim screen python-virtualenvwrapper"
 MYGROUPS="standard base-x"
-MYDESKTOP="slim rxvt-unicode-256color"
+MYDESKTOP="slim rxvt-unicode-256color xfce4-panel xfce4-{weather,mailwatch,datetime,mpc,timer}-plugin" #bspwm too..
 MYDESKTOP_FONTS="google-droid-{sans,serif,sans-mono}-fonts terminus-fonts"
-MYDESKTOP_APPS="firefox xfce4-panel"
+MYDESKTOP_APPS="firefox mpd mpc ncmpcpp"
 
 BSPWM_DEPS="libxcb-devel libxcb xcb-util xcb-util-wm xcb-util-devel xcb-util-wm-devel xcb-util-keysyms-devel"
 
