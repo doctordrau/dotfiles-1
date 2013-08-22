@@ -2,8 +2,8 @@
 
 MYUTILS="git zsh vim screen python-virtualenvwrapper"
 MYGROUPS="standard base-x"
-MYDESKTOP="slim rxvt-unicode-256color xfce4-panel xfce4-{weather,mailwatch,datetime,mpc,timer}-plugin" #bspwm too..
-MYDESKTOP_FONTS="google-droid-{sans,serif,sans-mono}-fonts terminus-fonts"
+MYDESKTOP="slim rxvt-unicode-256color xfce4-panel xfce4-weather-plugin xfce4-mailwatch-plugin xfce4-datetime-plugin xfce4-mpc-plugin xfce4-timer-plugin"
+MYDESKTOP_FONTS="terminus-fonts google-droid-sans-fonts google-droid-serif-fonts google-droid-sans-mono-fonts "
 MYDESKTOP_APPS="firefox mpd mpc ncmpcpp"
 
 BSPWM_DEPS="libxcb-devel libxcb xcb-util xcb-util-wm xcb-util-devel xcb-util-wm-devel xcb-util-keysyms-devel"
@@ -17,6 +17,7 @@ sudo yum group install -y $MYGROUPS
 sudo yum install -y $MYDESKTOP $MYDESKTOP_FONTS $MYDESKTOP_APPS
 
 sudo yum install -y $BSPWM_DEPS
+# Then compile and install bspwm/sxhkd
 
 sudo yum install -y http://www.infinality.net/fedora/linux/infinality-repo-1.0-1.noarch.rpm
 sudo yum install -y freetype-infinality infinality-settings
