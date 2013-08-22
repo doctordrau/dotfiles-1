@@ -39,6 +39,8 @@ ln -s config/bspwm .config/bspwm
 mv -f .config/sxhkd .config/sxhkd.orig
 ln -s config/sxhkd .config/sxhkd
 
+mv -f .config/xfce4 .config/xfce4.orig
+ln -s config/xfce4 .config/xfce4
 
 mv -f .compton.conf .compton.conf.orig
 ln -s config/compton.conf .compton.conf

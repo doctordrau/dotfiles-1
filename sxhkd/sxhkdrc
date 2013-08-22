@@ -124,5 +124,8 @@ alt + shift + b
 super + Escape
     pkill -USR1 -x sxhkd
 
+Pause
+    xscreensaver-command -lock
+
 
 # vim: set ft=sxhkdrc:
