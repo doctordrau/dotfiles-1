@@ -10,8 +10,6 @@ sxhkd &
 xfce4-panel -d &
 bspwm &
 
-xscreensaver-command -lock 
-
 # ck-launch-session dbus-launch <wm> if in need of dbus/ck?
 sleep inf
 
