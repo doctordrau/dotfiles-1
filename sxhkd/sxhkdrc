@@ -117,15 +117,21 @@ alt + p
 alt + Return
     dmenu_run
 
+alt + shift + space
+    google-chrome
+
 alt + shift + b
     firefox
 
 # make sxhkd reload its configuration files:
 super + Escape
     pkill -USR1 -x sxhkd
+super + shift + Escape
+    urxvt -e vim ~/.config/sxhkd/sxhkdrc
 
 Pause
     xscreensaver-command -lock
+
 
 
 # vim: set ft=sxhkdrc:

@@ -8,10 +8,11 @@
       <property name="position" type="string" value="p=6;x=0;y=0"/>
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="size" type="uint" value="30"/>
+      <property name="size" type="uint" value="16"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="4"/>
         <value type="int" value="15"/>
+        <value type="int" value="2"/>
         <value type="int" value="6"/>
         <value type="int" value="1"/>
         <value type="int" value="5"/>
@@ -20,7 +21,8 @@
       <property name="disable-struts" type="bool" value="false"/>
       <property name="leave-opacity" type="uint" value="100"/>
       <property name="enter-opacity" type="uint" value="100"/>
-      <property name="background-alpha" type="uint" value="100"/>
+      <property name="background-alpha" type="uint" value="0"/>
+      <property name="mode" type="uint" value="0"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -35,14 +37,24 @@
     <property name="plugin-4" type="string" value="pager">
       <property name="rows" type="uint" value="1"/>
       <property name="workspace-scrolling" type="bool" value="false"/>
-      <property name="miniature-view" type="bool" value="true"/>
+      <property name="miniature-view" type="bool" value="false"/>
     </property>
     <property name="plugin-5" type="string" value="clock">
       <property name="show-frame" type="bool" value="false"/>
-      <property name="digital-format" type="string" value="%I:%M %p"/>
+      <property name="digital-format" type="string" value="&lt;span color=&quot;white&quot; font=&quot;techno&quot;&gt;%I:%M %p&lt;/span&gt;"/>
+      <property name="mode" type="uint" value="2"/>
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="show-frame" type="bool" value="false"/>
+      <property name="names-visible" type="array">
+        <value type="string" value="google chrome"/>
+        <value type="string" value="hipchat"/>
+      </property>
+    </property>
+    <property name="plugin-2" type="string" value="mixer">
+      <property name="sound-card" type="string" value="HDAIntelPCHAlsamixer"/>
+      <property name="track" type="string" value="Master"/>
+      <property name="command" type="string" value="xfce4-mixer"/>
     </property>
   </property>
 </channel>
