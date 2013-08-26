@@ -3,6 +3,9 @@ xset +fp $HOME/.fonts/ansi
 xset fp rehash
 xsetroot -cursor_name left_ptr
 
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
+wmname LG3D
+
 xscreensaver &
 compton --config ~/.compton.conf &
 urxvtd &
