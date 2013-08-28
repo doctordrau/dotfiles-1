@@ -51,6 +51,9 @@ super + bracket{left,right}
 super + ctrl + {h,j,k,l}
     bspc window -p {left,down,up,right}
 
+ctrl + super + {Up,Down,Left,Right}
+    bspc window -p {up,down,left,right}
+
 super + ctrl + {_,shift + }space
     bspc {window -p cancel,desktop -c}
 
