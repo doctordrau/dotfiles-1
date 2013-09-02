@@ -51,7 +51,7 @@ super + bracket{left,right}
 super + ctrl + {h,j,k,l}
     bspc window -p {left,down,up,right}
 
-ctrl + super + {Up,Down,Left,Right}
+shift + super + {Up,Down,Left,Right}
     bspc window -p {up,down,left,right}
 
 super + ctrl + {_,shift + }space
@@ -110,6 +110,9 @@ super + {Up,Down,Left,Right}
 
 
 # Launchers
+
+{F11, F12}
+    amixer sset Master 2dB{-,+}
 
 alt + shift + Return
     urxvt

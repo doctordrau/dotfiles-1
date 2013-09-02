@@ -8,7 +8,7 @@ URxvt.loginShell: true
 !-*- Perl extensions -*-
 URxvt.perl-ext-common:default,clipboard,matcher,keyboard-select,font-size
 URxvt.keysym.M-u:     perl:url-select:select_next
-URxvt.urlLauncher:    /usr/bin/firefox
+URxvt.urlLauncher:    /usr/bin/google-chrome
 URxvt.underlineURLs:  True
 URxvt.matcher.button: 1 
 URxvt.keysym.M-Escape:perl:keyboard-select:activate
@@ -18,6 +18,8 @@ URxvt.keysym.M-C-v:   perl:clipboard:paste_escaped
 !URxvt.copyCommand:   xsel -ib
 !URxvt.pasteCommand:  xsel -ob
 
+URxvt.iso14755: false
+URxvt.iso14755_52: false
 !URxvt.perl-ext-common: ...,font-size
 URxvt.keysym.C-Up:	perl:font-size:increase
 URxvt.keysym.C-Down:	perl:font-size:decrease
