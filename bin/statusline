@@ -1,0 +1,4 @@
+#!/bin/sh
+STATUS_FILE=$HOME/.statusline
+[ -n "$*" ] && echo "$*" > $STATUS_FILE
+cat $STATUS_FILE
