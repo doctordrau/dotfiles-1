@@ -9,7 +9,7 @@ ssh-add &
 
 xscreensaver &
 compton --config ~/.compton.conf &
-urxvtd &
+urxvtd -q -o -f
 sxhkd &
 xfce4-panel -d &
 bspwm &
