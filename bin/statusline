@@ -1,4 +1,12 @@
 #!/bin/sh
 STATUS_FILE=$HOME/.statusline
+POMODORO_FILE=$HOME/.pomodoro_current
 [ -n "$*" ] && echo "$*" > $STATUS_FILE
-cat $STATUS_FILE
+
+if [ -f $POMODORO_FILE ]; then
+    time=$(pomodoro.sh time-left)
+    curr=$(pomodoro.sh current)
+    echo -n "($time) $curr" + $(<$STATUS_FILE)
+else
+    echo -n $(<$STATUS_FILE)
+fi

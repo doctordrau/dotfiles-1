@@ -120,6 +120,9 @@ alt + shift + Return
 alt + p
     dmenu_run
 
+alt + shift + p
+    pomodoro.sh
+
 alt + Return
     dmenu_run
 
