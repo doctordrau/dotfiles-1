@@ -4,7 +4,7 @@ POMODORO_FILE=$HOME/.pomodoro_current
 [ -n "$*" ] && echo "$*" > $STATUS_FILE
 
 if [ -f $POMODORO_FILE ]; then
-    time=$(pomodoro.sh time-left)
+    time=$(pomodoro.sh time)
     curr=$(pomodoro.sh current)
     echo -n "($time) $curr" + $(<$STATUS_FILE)
 else

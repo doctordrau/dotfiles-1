@@ -1,70 +1,127 @@
 #!/bin/sh
 
 # start interrupt interrupt-over reset resume end break-end interval
-POM_SPECIALS="Edit... Interrupted Reset End"
 HEIGHT=25
-INTERVAL=25
+POM_SPECIALS="Edit... Interrupted Reset End"
+POM_LIST="$HOME/.pomodoro_list"
+POM_CURRENT="$HOME/.pomodoro_current"
+POM_LOG="$HOME/.pomodoro_log"
 
 _pom_list () {
     # this could be better.  Options: simplenote or private gist
-    cat $HOME/.pomodoro_list
+    cat $POM_LIST
 }
 
 _pom_time_left () {
-    interval_sec=$(($INTERVAL * 60))
-    start=$(date -r ~/.pomodoro_current +%s)
-    end=$(($start + $interval_sec + 60))
-    now=$(date +%s)
-    left=$(($end - $now))
+    if [ -f "$POM_CURRENT" ]; then
+        INTERVAL=$((25 * 60)) # 25 minutes
+        #INTERVAL=5 # testing
+        POM_START=$(date -r $POM_CURRENT +%s)
+        END=$(($POM_START + $INTERVAL + 60)) # grace period
+        #END=$(($POM_START + $INTERVAL)) # testing
+        NOW=$(date +%s)
+        LEFT=$(($END - $NOW))
 
-    date -d "@$left" +'%M:%S'
+        if [ "$1" == "sec" ]; then
+            echo $LEFT
+        else
+            date -d "@$LEFT" +'%M:%S'
+        fi
+    fi
 }
 
-_pom_status () {
-    echo $(_pom_time_left) left
-}
-
-_pom_menu () { 
-    (echo $POM_SPECIALS | tr ' ' '\n' ; _pom_list) | dmenu -i -p "$(_pom_time_left)" -l "$HEIGHT" 
+_pom_menu () {
+    (echo $POM_SPECIALS | tr ' ' '\n' ; echo ; _pom_list) | dmenu -i -l "$HEIGHT" 
 }
 
 _pom_put () {
-    echo -n "$*" > ~/.pomodoro_current
-    touch ~/.pomodoro_current
+    echo -n "$*" > $POM_CURRENT
 }
 
-_pom_current () {
-    cat ~/.pomodoro_current
+_pom_get () {
+    if [ -f $POM_CURRENT ]; then
+        cat $POM_CURRENT
+    fi
 }
 
-case "$1" in
-    time-left)
-        _pom_time_left
+_pom_clean () {
+    rm -f $POM_CURRENT &>/dev/null
+}
+
+_pom_reset () {
+    touch $POM_CURRENT
+}
+
+_pom_log () {
+    x="$1" ; shift
+    echo "$(date +%T)" "$x" "$*" >> $POM_LOG
+    notify-send "pomodoro $x" "$*"
+}
+
+
+ACTION="$1"
+shift
+
+case "$ACTION" in
+    time)
+        if [ "$(_pom_time_left sec)" -le 0 ]; then
+            $0 end
+        else
+            _pom_time_left
+        fi
     ;;
+
     current)
-        _pom_current
+        _pom_get
     ;;
-    *)
-        POM=$(_pom_menu)
 
-        case "$POM" in
+    start)
+        _pom_log start "$*"
+        _pom_put "$*"
+    ;;
+ 
+    end)
+        p="$(_pom_get)"
+        if [ -n "$p" ]; then
+            _pom_log end "$p"
+            _pom_clean
+        fi
+    ;;
+
+    interrupted)
+        p="$(_pom_get)"
+        if [ -n "$p" ]; then
+            _pom_log interrupt "$p"
+            _pom_clean
+        fi
+    ;;
+
+    reset)
+        p="$(_pom_get)"
+        if [ -n "$p" ]; then
+            _pom_log reset "$p"
+            _pom_reset
+        fi
+    ;;
+   
+    *)
+        SELECTION=$(_pom_menu)
+
+        case "$SELECTION" in
             Edit...)
-                urxvt -e vim $HOME/.pomodoro_list &>/dev/null
+                urxvt -e vim "$POM_LIST" &>/dev/null
             ;;
 
-            Interrupt)
-                _pom_stop
-                _pom_interrupt
+            Interrupted*)
+                $0 interrupted "$reason"
             ;;
 
             Reset)
-                _pom_stop
-                _pom_menu
+                $0 reset
             ;;
 
             End)
-                _pom_stop
-                _pom_end
+                $0 end
             ;;
 
             # Exited without selecting an option
@@ -73,7 +130,7 @@ case "$1" in
 
             # Selected a pomodoro
             *)
-                _pom_put "$POM"
+                $0 start "$SELECTION"
             ;;
         esac
     ;;
