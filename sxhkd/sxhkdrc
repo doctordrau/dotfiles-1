@@ -2,16 +2,6 @@
 # bspwm hotkeys
 #
 
-
-# TODOS
-
-- Make alt+tab cycle windows on same desktop
-- bring in some nice stuff from the windelicato config but keep the standard example base
-- When holding down the WM modifier key, use dmenu to show what options are available given the current context 
-- make more duplicate bindings for xmonad muscle memory
-
-##
-
 super + alt + Escape
     bspc quit
 
@@ -33,6 +23,9 @@ super + {grave,Tab}
 super + apostrophe
     bspc window -s last
 
+super + y
+    bspc window -w last.manual
+
 super + m
     bspc window -s biggest
 
@@ -51,9 +44,6 @@ super + bracket{left,right}
 super + ctrl + {h,j,k,l}
     bspc window -p {left,down,up,right}
 
-shift + super + {Up,Down,Left,Right}
-    bspc window -p {up,down,left,right}
-
 super + ctrl + {_,shift + }space
     bspc {window -p cancel,desktop -c}
 
@@ -69,47 +59,80 @@ super + ctrl + {1-9}
 super + {_,shift + }{1-9,0}
     bspc {desktop -f,window -d} {1-9,0}
 
-:button1
+~button1
     bspc pointer -g focus
 
 super + button{1-3}
     bspc pointer -g {move,resize_side,resize_corner}
 
-alt + button{1-3}
-    bspc pointer -g {move,resize_side,resize_corner}
-
 super + !button{1-3}
     bspc pointer -t %i %i
 
-alt + !button{1-3}
-    bspc pointer -t %i %i
+# End of bspwm default bindings #
 
 
-# arranging desktops
-
-alt + {comma,period}
-    bspc desktop -F {horizontal,vertical}
-
-alt + shift + {comma,period}
-    bspc desktop -R {90,270}
-
-alt + space
-    bspc desktop -R 90
+#
+# sam's extra bspwm bindings:
+#
 
 
-# focusing windows
+#
+# window focus, preselection, moving
+#
 
+# alt+tab, rotate focus like everything else in the world (even android, jeez)
 alt + Tab
     bspc window -f next
 
 alt + shift + Tab
     bspc window -f prev
 
+# focus windows by super + arrow keys
 super + {Up,Down,Left,Right}
     bspc window -f {up,down,left,right}
 
+# alt+drag habit
+alt + button{1-3}
+    bspc pointer -g {move,resize_side,resize_corner}
 
+alt + !button{1-3}
+    bspc pointer -t %i %i
+
+# alternate arrow key version of builtin window presel binding.
+# and, in bspwmrc, do: bspc config auto_cancel true
+shift + super + {Up,Down,Left,Right}
+    bspc window -p {up,down,left,right}
+
+#
+# layout stuff
+#
+
+
+# with xmonad, this toggles layout modes: SplitPane, RotatedSplitPlane, Monocle
+# bspwm can do the same thing, but it only has two modes, default and monocle
+# however super + . and , will rotate the layout anyways
+alt + space
+    bspc desktop -l next
+
+
+
+#
+# sxhkd itself
+#
+
+# make sxhkd reload its configuration files:
+super + Escape
+    pkill -USR1 -x sxhkd
+
+# edit sxhkdrc
+super + shift + Escape
+    urxvt -e vim ~/.config/sxhkd/sxhkdrc
+
+
+
+#
 # Launchers
+#
 
 {F11, F12}
     amixer sset Master 2dB{-,+}
@@ -123,24 +146,11 @@ alt + p
 alt + shift + p
     pomodoro.sh
 
-alt + Return
-    dmenu_run
-
 alt + shift + space
     google-chrome
 
 alt + shift + b
     firefox
 
-# make sxhkd reload its configuration files:
-super + Escape
-    pkill -USR1 -x sxhkd
-super + shift + Escape
-    urxvt -e vim ~/.config/sxhkd/sxhkdrc
-
 Pause
     xscreensaver-command -lock
-
-
-
-# vim: set ft=sxhkdrc:
