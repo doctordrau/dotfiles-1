@@ -9,6 +9,15 @@ bspc desktop Desktop01 -n $FIRST_DESK
 bspc monitor -a $REMAINING_DESKS
 bspc monitor -p 18 0 0 0
 
+
+#if [ -f ~/.bspwm_tree ]; then
+#    bspc restore -T ~/.bspwm_tree
+#else
+    bspc control --adopt-orphans
+#fi
+#[ -f ~/.bspwm_history ] && bspc restore -H ~/.bspwm_history
+
+
 bspc config split_ratio         0.52
 bspc config border_width        2
 bspc config window_gap          12
@@ -30,3 +39,6 @@ bspc rule -a Thunar --floating
 bspc rule -a Transmission --floating
 bspc rule -a feh --floating
 bspc rule -a Gimp -d 8 --floating
+
+# do this here so that we know the NetWM anchor window is up
+~/bin/java_nonreparenting_wm_hack.sh
