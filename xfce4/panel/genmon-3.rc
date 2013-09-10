@@ -2,5 +2,5 @@ Command=statusline
 UseLabel=0
 Text=
 UpdatePeriod=1000
-Font=Droid Serif 10
+Font=Sans Bold 10
 
