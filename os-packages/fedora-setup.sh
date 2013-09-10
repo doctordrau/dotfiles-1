@@ -2,8 +2,8 @@
 
 MYUTILS="git zsh vim screen python-virtualenvwrapper"
 MYGROUPS="standard base-x"
-MYDESKTOP="slim rxvt-unicode-256color xfce4-panel xfce4-weather-plugin xfce4-mailwatch-plugin xfce4-datetime-plugin xfce4-mpc-plugin xfce4-timer-plugin xfce4-icon-theme"
-YDESKTOP_FONTS="terminus-fonts google-droid-sans-fonts google-droid-serif-fonts google-droid-sans-mono-fonts "
+MYDESKTOP="slim rxvt-unicode-256color xfce4-panel xfce4-weather-plugin xfce4-mailwatch-plugin xfce4-datetime-plugin xfce4-mpc-plugin xfce4-timer-plugin xfce4-icon-theme xfce4-settings gtk-chtheme gtk2-engines "
+MYDESKTOP_FONTS="terminus-fonts google-droid-sans-fonts google-droid-serif-fonts google-droid-sans-mono-fonts levien-inconsolata-fonts"
 MYDESKTOP_APPS="firefox mpd mpc ncmpcpp"
 
 BSPWM_DEPS="libxcb-devel libxcb xcb-util xcb-util-wm xcb-util-devel xcb-util-wm-devel xcb-util-keysyms-devel"
