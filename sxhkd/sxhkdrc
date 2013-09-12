@@ -75,7 +75,6 @@ super + !button{1-3}
 # sam's extra bspwm bindings:
 #
 
-
 #
 # window focus, preselection, moving
 #
@@ -103,6 +102,10 @@ alt + !button{1-3}
 shift + super + {Up,Down,Left,Right}
     bspc window -p {up,down,left,right}
 
+# those buttons on the side of the mouse? let's switch desktops with those...
+super + button{8,9}
+    bspc desktop -f {prev,next}
+
 #
 # layout stuff
 #
@@ -113,7 +116,6 @@ shift + super + {Up,Down,Left,Right}
 # however super + . and , will rotate the layout anyways
 alt + space
     bspc desktop -l next
-
 
 
 #
