@@ -117,6 +117,9 @@ super + button{8,9}
 alt + space
     bspc desktop -l next
 
+super + shift + {comma,period}
+    bspc desktop -R {90,270}
+
 
 #
 # sxhkd itself
