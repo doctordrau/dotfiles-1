@@ -137,6 +137,9 @@ super + shift + Escape
 {F11, F12}
     amixer sset Master 2dB{-,+}
 
+{XF86AudioLowerVolume, XF86AudioRaiseVolume}
+    amixer sset Master 2dB{-,+}
+
 alt + shift + Return
     urxvt
 
@@ -152,5 +155,5 @@ alt + shift + space
 alt + shift + b
     firefox
 
-Pause
+{Pause,XF86Eject}
     xscreensaver-command -lock
