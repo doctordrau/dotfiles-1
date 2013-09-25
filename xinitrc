@@ -2,7 +2,7 @@ xrdb -merge ~/.Xresources
 xset +fp $HOME/.fonts/ansi
 xset fp rehash
 xsetroot -cursor_name left_ptr
-~/bin/synclient.sh &
+~/bin/macbook.sh &
 
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
 eval $(ssh-agent)
