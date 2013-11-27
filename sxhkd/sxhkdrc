@@ -157,6 +157,9 @@ super + shift + Escape
 {XF86AudioLowerVolume, XF86AudioRaiseVolume}
     amixer sset Master 2dB{-,+}
 
+{XF86MonBrightnessDown, XF86MonBrightnessUp}
+    ~/bin/bright {down,up}
+
 alt + shift + Return
     terminator
 

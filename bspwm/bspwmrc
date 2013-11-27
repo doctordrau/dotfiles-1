@@ -2,6 +2,15 @@
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
+bspc monitor -a $REMAINING_DESKS
+
+#if [ -f ~/.bspwm_tree ]; then
+#    bspc restore -T ~/.bspwm_tree
+#else
+    bspc control --adopt-orphans
+#fi
+#[ -f ~/.bspwm_history ] && bspc restore -H ~/.bspwm_history
+
 bspc config top_padding 18
 bspc config split_ratio         0.52
 bspc config border_width        2
