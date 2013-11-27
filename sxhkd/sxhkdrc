@@ -23,6 +23,13 @@ super + {grave,Tab}
 super + apostrophe
     bspc window -s last
 
+# new
+super + {o,i}
+    bspc control --record-history off; \
+    bspc window {older,newer} -f; \
+    bspc control --record-history on
+
+
 super + y
     bspc window -w last.manual
 
@@ -67,6 +74,11 @@ super + button{1-3}
 
 super + !button{1-3}
     bspc pointer -t %i %i
+
+# new
+super + @button{1-3}
+    bspc pointer -u
+
 
 # End of bspwm default bindings #
 
@@ -146,7 +158,7 @@ super + shift + Escape
     amixer sset Master 2dB{-,+}
 
 alt + shift + Return
-    urxvt
+    terminator
 
 alt + p
     dmenu_run
