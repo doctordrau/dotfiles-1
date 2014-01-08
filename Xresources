@@ -37,12 +37,6 @@ URxvt*font: xft:Terminus:pixelsize=14:antialias=true:hinting=true
 
 URxvt*termName: rxvt-color
 
-!! terminal colors
-*cursorColor: #FF0000
-
-!  - color scheme
-*background: #000000
-*foreground: #cccccc
 ! black
 URxvt*color:    #141414
 URxvt*color8:   #5C585C

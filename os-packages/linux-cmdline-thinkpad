@@ -1,0 +1,2 @@
+GRUB_CMDLINE_LINUX="$GRUB_CMDLINE_LINUX acpi_osi=Linux acpi_backlight=vendor"
+
