@@ -34,13 +34,13 @@ mv -f .Xresources .Xresources.orig
 ln -s config/Xresources .Xresources
 
 mv -f .config/bspwm .config/bspwm.orig
-ln -s config/bspwm .config/bspwm
+ln -s $HOME/config/bspwm .config/bspwm
 
 mv -f .config/sxhkd .config/sxhkd.orig
-ln -s config/sxhkd .config/sxhkd
+ln -s $HOME/config/sxhkd .config/sxhkd
 
 mv -f .config/xfce4 .config/xfce4.orig
-ln -s config/xfce4 .config/xfce4
+ln -s $HOME/config/xfce4 .config/xfce4
 
 mv -f .compton.conf .compton.conf.orig
 ln -s config/compton.conf .compton.conf
