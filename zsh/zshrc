@@ -49,3 +49,5 @@ export PERL_MB_OPT="--install_base /home/spowers/perl5";
 export PERL_MM_OPT="INSTALL_BASE=/home/spowers/perl5";
 export PERL5LIB="/home/spowers/perl5/lib/perl5:$PERL5LIB";
 export PATH="/usr/local/cassandra/bin:/home/spowers/perl5/bin:$PATH";
+
+test -f ~/.gcal && cat ~/.gcal
