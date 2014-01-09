@@ -38,19 +38,7 @@ define packages::repo_release ($source) {
         }
 }
 
-class bspwm_deps {
-    # There is a good reason we only do the list of packages here and not all of libxcb. Install it all if you want to find out the reason..
-
-	package { ['libxcb-devel', 'libxcb', 'xcb-util', 'xcb-util-devel', 'xcb-util-keysyms-devel']: ensure => "installed" }
-    exec { "snag-f19-deps":
-        command => "/bin/yum install -y --releasever=19 --nogpgcheck xcb-util-wm*",
-        timeout => 600
-    }
-}
-
 class box {
-	include bspwm_deps
-
 	yumgroup { $yumgroups: ensure => installed }
 
 	package { [

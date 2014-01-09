@@ -1,0 +1,5 @@
+#!/bin/sh
+
+SSH_OPTS="-o ConnectionAttempts=666 -o ConnectTimeout=5"
+ssh $SSH_OPTS -n -XC $1 x2x -east -from :0.0 &
+notify-send "x2x-ssh code $?"
