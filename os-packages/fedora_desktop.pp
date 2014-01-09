@@ -1,9 +1,9 @@
-$yumgroups = [ "standard", "base-x" ] 
+$yumgroups = [ "standard", "base-x", "c-development" ] 
 $chrome = [ 'https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm' ]
 
 $userenv = [ "git", "zsh", "vim-minimal", "screen", "python-virtualenvwrapper", "vpnc" ]
 
-$desktop = ['slim', 'rxvt-unicode-256color', 'xfce4-panel', 'xfce4-weather-plugin', 'xfce4-mailwatch-plugin', 'xfce4-datetime-plugin', 'xfce4-mpc-plugin', 'xfce4-timer-plugin', 'xfce4-icon-theme', 'xfce4-settings', 'gtk-chtheme', 'gtk2-engines', 'alsa-utils', 'compton', 'xscreensaver', 'dmenu', 'network-manager-applet', $chrome]
+$desktop = ['slim', 'rxvt-unicode-256color', 'gtk-chtheme', 'gtk2-engines', 'alsa-utils', 'compton', 'xscreensaver', 'dmenu', 'network-manager-applet', $chrome]
 
 $fonts = ['terminus-fonts', 'google-droid-sans-fonts', 'google-droid-serif-fonts', 'google-droid-sans-mono-fonts', 'levien-inconsolata-fonts']
 
@@ -47,6 +47,7 @@ class box {
 		$fonts,
 		$apps,
 	]: ensure => "installed" }
+
 
     file { '/etc/systemd/system/default.target':
         ensure => link,
