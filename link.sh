@@ -42,5 +42,14 @@ ln -s $HOME/config/sxhkd .config/sxhkd
 mv -f .config/xfce4 .config/xfce4.orig
 ln -s $HOME/config/xfce4 .config/xfce4
 
+mv -f .config/lxpanel .config/lxpanel.orig
+ln -s $HOME/config/lxpanel .config/lxpanel
+
 mv -f .compton.conf .compton.conf.orig
 ln -s config/compton.conf .compton.conf
+
+mv -f .gtkrc-2.0 .gtkrc-2.0.orig
+ln -s config/gtkrc-2.0 .gtkrc-2.0
+
+
+
