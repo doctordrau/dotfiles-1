@@ -1,0 +1,97 @@
+# lxpanel <profile> config file. Manually editing is not recommended.
+# Use preference dialog in lxpanel to adjust config when you can.
+
+Global {
+    edge=top
+    allign=center
+    margin=0
+    widthtype=percent
+    width=100
+    height=16
+    transparent=1
+    tintcolor=#000000
+    alpha=255
+    autohide=0
+    heightwhenhidden=2
+    setdocktype=1
+    setpartialstrut=1
+    usefontcolor=1
+    fontsize=12
+    fontcolor=#657b83
+    usefontsize=1
+    background=0
+    backgroundfile=/usr/share/lxpanel/images/background.png
+    iconsize=16
+    loglevel=2
+}
+
+Plugin {
+    type = wnckpager
+}
+
+Plugin {
+    type = space
+    expand=1
+    Config {
+        Size=2
+    }
+}
+
+Plugin {
+    type = deskno
+    Config {
+        BoldFont=1
+        WMLabels=1
+    }
+}
+
+Plugin {
+    type = space
+    expand=1
+    Config {
+        Size=2
+    }
+}
+
+Plugin {
+    type = monitors
+    Config {
+        DisplayCPU=1
+        DisplayRAM=1
+        Action=xterm -e top
+        CPUColor=#657B83
+        RAMColor=#657B83
+    }
+}
+
+Plugin {
+    type = tray
+}
+
+Plugin {
+    type = batt
+    Config {
+        HideIfNoBattery=0
+        AlarmCommand=sudo pm-suspend-hybrid
+        AlarmTime=5
+        BackgroundColor=#657b83
+        BorderWidth=0
+        ChargingColor1=#657b83
+        ChargingColor2=#586e75
+        DischargingColor1=#073642
+        DischargingColor2=#002b36
+        Size=8
+    }
+}
+
+Plugin {
+    type = dclock
+    Config {
+        ClockFmt=%R
+        TooltipFmt=%A %x
+        BoldFont=1
+        IconOnly=0
+        CenterText=0
+    }
+}
+

@@ -1,0 +1,21 @@
+[global_config]
+[keybindings]
+[profiles]
+  [[default]]
+    scrollbar_position = hidden
+    background_image = None
+    autoclean_groups = False
+    use_system_font = False
+    scroll_on_output = False
+    show_titlebar = False
+    font = Source Code Pro Semi-Bold 8
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
