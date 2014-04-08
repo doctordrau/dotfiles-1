@@ -54,7 +54,6 @@ alsa-utils
 avahi
 avahi-tools
 dmenu
-feh
 firefox
 freetype-infinality
 git
@@ -96,6 +95,7 @@ terminus-fonts
 tinc
 vim
 vpnc
+x11-ssh-askpass
 xcb-util-*
 xcb-util-devel
 xcb-util-keysyms-devel
