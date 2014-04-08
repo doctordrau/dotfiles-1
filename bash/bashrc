@@ -31,9 +31,7 @@ export PIP_DOWNLOAD_CACHE=/tmp/pip_cache
 sauce /usr/local/bin/virtualenvwrapper.sh
 eval "`pip completion --bash`"
 
-sauce $HOME/.rvm/scripts/rvm
 sauce $CONF/resty
-
 
 # Pull in per-host and per-`uname-s` configs
 sauce $CONF/os/$(uname -s)/bashrc
@@ -44,6 +42,3 @@ sauce $CONF/aliases
 
 # Area for lazy appending:
 
-
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
