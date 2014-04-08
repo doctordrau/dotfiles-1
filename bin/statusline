@@ -1,12 +1,25 @@
 #!/bin/sh
 STATUS_FILE=$HOME/.statusline
 POMODORO_FILE=$HOME/.pomodoro_current
+
+if [ "$1" == "-f" ]; then
+    while sleep 1; do
+        if [ ! -f $POMODORO_FILE ]; then
+            echo
+            continue
+        fi
+        curr=$(pomodoro.sh current)
+        echo "    $curr ($(pomodoro.sh time))" $(<$STATUS_FILE)
+    done
+    exit 1
+fi
+
 [ -n "$*" ] && echo "$*" > $STATUS_FILE
 
 if [ -f $POMODORO_FILE ]; then
     time=$(pomodoro.sh time)
     curr=$(pomodoro.sh current)
-    echo -n "($time) $curr" + $(<$STATUS_FILE)
+    echo -n "($time) $curr" $(<$STATUS_FILE)
 else
     echo -n $(<$STATUS_FILE)
 fi
