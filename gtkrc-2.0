@@ -1,13 +1,13 @@
 # -- THEME AUTO-WRITTEN DO NOT EDIT
-include "/usr/share/themes/Greybird/gtk-2.0/gtkrc"
+include "/home/spowers/.themes/Clearlooks-flat-compact/gtk-2.0/gtkrc"
 
 style "user-font" {
-	font_name = "Droid Sans 10"
+	font_name = "Droid Sans 9"
 }
 
 widget_class "*" style "user-font"
 
-gtk-font-name="Droid Sans 10"
+gtk-font-name="Droid Sans 9"
 
 include "/home/spowers/.gtkrc.mine"
 
