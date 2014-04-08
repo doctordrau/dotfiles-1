@@ -46,6 +46,14 @@ Plugin {
 }
 
 Plugin {
+    type = command_monitor
+    Config {
+        Command=statusline -f
+        UseGTKMarkup=0
+    }
+}
+
+Plugin {
     type = space
     expand=1
     Config {
@@ -69,18 +77,14 @@ Plugin {
 }
 
 Plugin {
-    type = batt
+    type = dclock
     Config {
-        HideIfNoBattery=0
-        AlarmCommand=sudo pm-suspend-hybrid
-        AlarmTime=5
-        BackgroundColor=#657b83
-        BorderWidth=0
-        ChargingColor1=#657b83
-        ChargingColor2=#586e75
-        DischargingColor1=#073642
-        DischargingColor2=#002b36
-        Size=8
+        ClockFmt=%_I/
+        TooltipFmt=%A %x
+        Action=xdaliclock
+        BoldFont=0
+        IconOnly=0
+        CenterText=0
     }
 }
 
