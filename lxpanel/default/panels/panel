@@ -46,14 +46,6 @@ Plugin {
 }
 
 Plugin {
-    type = command_monitor
-    Config {
-        Command=statusline -f
-        UseGTKMarkup=0
-    }
-}
-
-Plugin {
     type = space
     expand=1
     Config {
@@ -74,6 +66,21 @@ Plugin {
 
 Plugin {
     type = tray
+}
+
+Plugin {
+    type = batt
+    Config {
+        HideIfNoBattery=1
+        AlarmTime=0
+        BackgroundColor=#657b83
+        BorderWidth=0
+        ChargingColor1=#657b83
+        ChargingColor2=#657b83
+        DischargingColor1=#657b83
+        DischargingColor2=#657b83
+        Size=5
+    }
 }
 
 Plugin {
