@@ -73,7 +73,7 @@ Plugin {
     Config {
         HideIfNoBattery=1
         AlarmTime=0
-        BackgroundColor=#657b83
+        BackgroundColor=#000000
         BorderWidth=0
         ChargingColor1=#657b83
         ChargingColor2=#657b83
