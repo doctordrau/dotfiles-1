@@ -3,7 +3,7 @@ xset +fp $HOME/.fonts/ansi
 xset fp rehash
 xsetroot -cursor_name left_ptr
 
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
 killall ssh-agent
 eval $(ssh-agent)
 ssh-add &
@@ -14,7 +14,6 @@ sxhkd &
 lxpanel &
 xscreensaver &
 nm-applet &
-compton --config ~/.compton.conf &
 
 google-chrome --no-startup-window &
 

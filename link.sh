@@ -1,5 +1,8 @@
 #!/bin/sh -x
 
+cd ~/config
+git remote set-url origin git@github.com:sampowers/dotfiles.git
+
 cd ~
 [[ -d config ]] || ( echo "dazed and confused" ; exit 0)
 
@@ -51,5 +54,7 @@ ln -s config/compton.conf .compton.conf
 mv -f .gtkrc-2.0 .gtkrc-2.0.orig
 ln -s config/gtkrc-2.0 .gtkrc-2.0
 
+mv -f .themes .themes.orig
+ln -s config/gtk.themes .themes
 
 
