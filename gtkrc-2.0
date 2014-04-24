@@ -8,6 +8,8 @@ style "user-font" {
 widget_class "*" style "user-font"
 
 gtk-font-name="Droid Sans 9"
+gtk-icon-theme-name="Tango"
+
 
 include "/home/spowers/.gtkrc.mine"
 
