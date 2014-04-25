@@ -16,6 +16,8 @@ xscreensaver &
 nm-applet &
 
 google-chrome --no-startup-window &
+~/bin/extmon.sh -d &
+
 
 # ck-launch-session dbus-launch <wm> if in need of dbus/ck?
 sleep inf
