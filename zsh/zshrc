@@ -35,19 +35,19 @@ DISABLE_VENV_CD=1
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 #COMPLETION_WAITING_DOTS="true"
 
-plugins=(git pip virtualenvwrapper osx terminalapp sublime vagrant)
+plugins=(git pip virtualenvwrapper sublime vagrant rbenv bundler)
 
 source $ZSH/oh-my-zsh.sh
 
-PATH="$HOME/bin:$PATH"
+#PATH="$HOME/bin:$PATH"
 
 # Sets PERL5LIB and adds bin dir to PATH / cpanm --local-lib=~/perl5 local::lib
-test -d ~/perl5 && eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
+#test -d ~/perl5 && eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
 
-export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/home/spowers/perl5";
-export PERL_MB_OPT="--install_base /home/spowers/perl5";
-export PERL_MM_OPT="INSTALL_BASE=/home/spowers/perl5";
-export PERL5LIB="/home/spowers/perl5/lib/perl5:$PERL5LIB";
-export PATH="/usr/local/cassandra/bin:/home/spowers/perl5/bin:$PATH";
+#export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/home/spowers/perl5";
+#export PERL_MB_OPT="--install_base /home/spowers/perl5";
+#export PERL_MM_OPT="INSTALL_BASE=/home/spowers/perl5";
+#export PERL5LIB="/home/spowers/perl5/lib/perl5:$PERL5LIB";
+#export PATH="/usr/local/cassandra/bin:/home/spowers/perl5/bin:$PATH";
 
 test -f ~/.gcal && cat ~/.gcal
