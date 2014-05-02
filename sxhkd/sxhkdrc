@@ -171,6 +171,9 @@ alt + p
 alt + shift + p
     pomodoro.sh
 
+alt + shift + f
+    thunar
+
 alt + shift + space
     google-chrome
 
