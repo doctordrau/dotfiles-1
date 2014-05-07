@@ -1,0 +1,4 @@
+#!/bin/sh
+
+date > ~/.gcal
+/bin/google calendar today >> ~/.gcal
