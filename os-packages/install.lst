@@ -56,3 +56,5 @@ xcb-util-keysyms-devel
 xcb-util-wm*
 xscreensaver
 zsh
+zukitwo-gtk3-theme
+gnome-icon-theme-symbolic
