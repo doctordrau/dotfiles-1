@@ -109,7 +109,7 @@ case "$ACTION" in
 
         case "$SELECTION" in
             Edit...)
-                urxvt -e vim "$POM_LIST" &>/dev/null
+               mousepad "$POM_LIST" &>/dev/null
             ;;
 
             Interrupted*)
