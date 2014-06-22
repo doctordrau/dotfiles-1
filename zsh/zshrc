@@ -14,6 +14,7 @@ ZSH_THEME=rgm
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias vi=vim
+#alias ssh=~/config/bin/moshalias.pl
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -31,11 +32,13 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_AUTO_TITLE="true"
 
 DISABLE_VENV_CD=1
+HIST_STAMPS="yyyy-mm-dd"
+
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 #COMPLETION_WAITING_DOTS="true"
 
-plugins=(git pip virtualenvwrapper sublime vagrant rbenv bundler)
+plugins=(git pip virtualenvwrapper sublime vagrant rbenv bundler fasd)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -54,3 +57,21 @@ test -f ~/.gcal && cat ~/.gcal
 
 dirdiff () { diff -ui <(cd "$1" && find | sort -f) <(cd "$2" && find | sort -f) }
 
+setopt autopushd
+
+go-up () {
+cd ..
+zle reset-prompt
+}; zle -N go-up
+
+go-back () {
+popd
+zle reset-prompt
+}; zle -N go-back
+
+
+# shift+up arrow
+bindkey '^[[1;2A' go-up
+
+# shift+left arrow
+bindkey '^[[1;2D' go-back
