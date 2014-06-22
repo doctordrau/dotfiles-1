@@ -1,0 +1,5 @@
+[Service]
+User=spowers
+Type=oneshot
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/xscreensaver-command -lock
