@@ -3,8 +3,10 @@ set bg=dark
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
-set foldlevel=10
-set foldmethod=indent
+if exists("&foldenable")
+    set foldlevel=10
+    set foldmethod=indent
+endif
 set shortmess=atI
 set autoindent
 set expandtab
@@ -24,8 +26,8 @@ set wildmenu
 filetype plugin on
            
 runtime mappings.vim
-runtime mousescroll.vim
 runtime cruft.vim
+runtime mousescroll.vim
 
 map <F1> :w<CR>
 imap <F1> <Esc>:w<CR>
