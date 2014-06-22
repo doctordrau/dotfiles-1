@@ -162,6 +162,9 @@ super + shift + Escape
 {XF86MonBrightnessDown, XF86MonBrightnessUp}
     ~/bin/bright {down,up}
 
+alt + shift + 4
+    ~/bin/ss
+
 alt + shift + Return
     terminator
 

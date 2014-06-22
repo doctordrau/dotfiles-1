@@ -72,6 +72,7 @@ Plugin {
     type = batt
     Config {
         HideIfNoBattery=1
+        AlarmCommand=zenity --warning --text='Battery low'
         AlarmTime=0
         BackgroundColor=#000000
         BorderWidth=0

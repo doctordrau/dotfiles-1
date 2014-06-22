@@ -23,7 +23,7 @@ randr_event_listener () {
 while getopts "ard" OPTION; do
  case "$OPTION" in
     a) xrandr --output LVDS1 --mode "$LVDS_RES" --pos 0x0 \
-              --output VGA1 --auto --right-of LVDS1
+              --output VGA1 --auto --left-of LVDS1
               # --output VGA1  --mode "$VGA_RES"  --same-as LVDS1
        ;;
     r) xrandr --output VGA1 --off --output LVDS1 --auto
