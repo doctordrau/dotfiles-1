@@ -2,7 +2,7 @@
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
-bspc config top_padding 16
+bspc config top_padding 24
 bspc config split_ratio         0.52
 bspc config border_width        2
 bspc config window_gap          2
@@ -26,6 +26,9 @@ bspc rule -a Chromium desktop=^2
 bspc rule -a mplayer2 floating=on
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+
+# stick+float hangouts chat windows
+bspc rule -a crx_nckgahadagoaajjgafhacjanaoiihapd  floating=on sticky=on
 
 # do this here so that we know the NetWM anchor window is up
 ~/bin/java_nonreparenting_wm_hack.sh
