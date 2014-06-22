@@ -3,4 +3,4 @@
 	url = git://github.com/robbyrussell/oh-my-zsh
 [submodule "Clearlooks-flat-compact"]
 	path = Clearlooks-flat-compact
-	url = git@github.com:linvinus/Clearlooks-flat-compact.git
+	url = ./Clearlooks-flat-compact
