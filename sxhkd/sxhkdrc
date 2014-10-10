@@ -17,6 +17,9 @@ super + b
 super + {s,f}
 	bspc window -t {floating,fullscreen}
 
+super + shift + s
+    bspc window -t sticky
+
 super + {grave,Tab}
 	bspc {window,desktop} -f last
 
@@ -175,13 +178,16 @@ alt + shift + p
     pomodoro.sh
 
 alt + shift + f
-    thunar
+    caja
 
 alt + shift + space
-    google-chrome
+    firefox
 
 alt + shift + b
-    firefox
+    google-chrome
 
 {Pause,XF86Eject}
     xscreensaver-command -lock
+
+super + {Pause,XF86Eject}
+    sleep 1 ; sudo pm-suspend-hybrid
