@@ -181,10 +181,10 @@ alt + shift + f
     caja
 
 alt + shift + space
-    firefox
+    google-chrome
 
 alt + shift + b
-    google-chrome
+    firefox
 
 {Pause,XF86Eject}
     xscreensaver-command -lock

@@ -39,7 +39,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 #COMPLETION_WAITING_DOTS="true"
 
-plugins=(git pip virtualenvwrapper sublime vagrant rbenv bundler fasd docker)
+plugins=(git pip virtualenvwrapper sublime docker fabric jira)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -60,19 +60,22 @@ dirdiff () { diff -ui <(cd "$1" && find | sort -f) <(cd "$2" && find | sort -f) 
 
 setopt autopushd
 
-go-up () {
-cd ..
-zle reset-prompt
-}; zle -N go-up
 
-go-back () {
-popd
-zle reset-prompt
-}; zle -N go-back
+#go-up () {
+#cd ..
+#zle reset-prompt
+#}; zle -N go-up
+
+#go-back () {
+#popd
+#zle reset-prompt
+#}; zle -N go-back
 
 
 # shift+up arrow
-bindkey '^[[1;2A' go-up
+#bindkey '^[[1;2A' go-up
 
 # shift+left arrow
-bindkey '^[[1;2D' go-back
+#bindkey '^[[1;2D' go-back
+alias adb=~/Downloads/android-sdk-linux/platform-tools/adb
+
